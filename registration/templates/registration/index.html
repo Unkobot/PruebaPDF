@@ -1,0 +1,5 @@
+{% extends "registration/base.html" %}
+{% block content %}
+<h3>Bienvenido {{request.user}}</h3>
+{{request.user.session}}
+{% endblock content %}
