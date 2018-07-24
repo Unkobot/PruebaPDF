@@ -1,0 +1,22 @@
+{% extends "easy_pdf/base.html" %} {% block content %}
+<div id="content">
+    <table border="1">
+        <tr>
+            <td>Nombre de usuario</td>
+            <td>Correo</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+        </tr>
+
+        {% for x in object_list %}
+        <tr>
+            <td>{{x.username}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.first_name}}</td>
+            <td>{{x.last_name}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
